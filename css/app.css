@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home{
+    background-image: url("../img/bg-shape.svg");
+    background-repeat:no-repeat ;
+    background-size: 50%;
+    background-position: right top;
+    /* position: relative; */
+}
+
+#last{
+        background-color: #1c3f73;
+        height: 300px;
+}
+
+.scroll-to-next{
+    position: absolute;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+}
+
+.mouse{
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+    @keyframes toshow{
+        from{
+            transform: translateY(-200px);
+        }to{
+            transform: translateY(0);
+            
+        }   
+    }
+
+.site-nav{
+    position: absolute;
+    top: 0;
+
+    /* background-color: #7E76F9; */
+    /* transition: 0.5s; */
+}
+
+.site-nav-scroll{
+    position: fixed;
+    background-color: #ffffff;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px #00000020;
+    z-index: 1005;
+    animation: toshow 0.3s linear;
+}
+
+.site-nav-scroll .nav-link{
+    color: #1c3f73 !important;
+}
+
+.site-nav-scroll .icon{
+    color: #1c3f73 !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.about-img{
+    background-image: url("../img/bg-2.svg");
+    background-size: 100%;
+    background-position: top;
+}
+
+.services-card{
+    border-radius: 35px;
+    border: none;
+    /* width: 300px; */
+}
+
+.pricing-card{
+    border-radius: 30px;
+    width: 330px;
+    border: none;
+    height: 380px;
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.02) !important; */
+  
+    transition: 0.5s;
+}
+
+.pricing-card:hover{
+    
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05) !important;
+    /* backdrop-filter: blur(10px); */
+    transform: scale(0.95);
+
+}
+
+#about{
+    background-color: #7E76F910;
+}
+
+#pricing{
+    background-color: #7E76F915;
+}
+
+#services{
+    background-image: url("../img/bg-3.svg");
+}
+
+
+a.nav-link.active{
+    border-bottom: 2px solid #1c3f73 !important;
+}
+
+
+a.home.nav-link.active{
+    border-bottom: 2px solid #ffffff !important;
+}
+
+
+.site-nav-scroll .nav-link.active{
+    border-bottom: 2px solid #1c3f73 !important;
+}
+
+
+@media screen and (max-width:576px) {
+
+    a.nav-link.active{
+        border-bottom: 1px solid #1c3f73 !important;
+        border-bottom-width: 200px;
+    }
+
+    .site-nav-scroll .nav-link.active{
+        border-bottom: 2px solid #1c3f73 !important;
+        border-bottom-width: 200px;
+
+    }
+
+    a.home.nav-link.active{
+        border-bottom: 2px solid #1c3f73 !important;
+    }
+
+    li.nav-item{
+        margin: auto;
+    }
+
+    .about-content,.about-img{
+        width: 100% !important;
+    }
+
+    .pricing-card{
+        width: 360px !important;
+    }
+
+    .mouse{
+        left: auto;
+        bottom: 110px;
+        right: 10px;
+        margin: auto;
+    }
+
+    .scroll-to-next{
+        left: auto;
+        bottom: 25px;
+        right: 10px;
+        margin: auto;
+    }
+
+
+    #last{
+        height: 650px;
+   }
+
+   .site-nav{
+       background-color: #ffffff;
+   }
+
+   .site-nav .icon{
+    color: #1c3f73 !important;
+
+   }
+
+   .site-nav .nav-link{
+    color: #1c3f73 !important;
+   
+   }
+}
+
+
+
+
+.slick-dots{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.slick-dots li {
+    width: 10px !important;
+    height: 10px !important;
+    border: 2px solid #7E76F9;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #7E76F9;
+    
+}
